@@ -4,33 +4,84 @@
 int main() {
     ListaCircularDoble lista_libros;
 
-    Libro libro1 = {"El gran Gatsby", "F. Scott Fitzgerald", 1925};
-    Libro libro2 = {"Cien años de soledad", "Gabriel García Márquez", 1967};
-    Libro libro3 = {"Alicia en el pais de las maravillas", "George Orwell", 1949};
+    int opcion = 0;
 
-    lista_libros.insertar(libro1);
-    lista_libros.insertar(libro2);
-    lista_libros.insertar(libro3);
+    while (opcion < 6) {
 
-    std::cout << "Lista original:" << std::endl << std::endl;
 
-    lista_libros.imprimir();
+        std::cout << "Seleccione una opcion:" << std::endl;
+        std::cout << "1. Insertar" << std::endl;
+        std::cout << "2. Eliminar" << std::endl;
+        std::cout << "3. Vaciar" << std::endl;
+        std::cout << "4. Obtener primero" << std::endl;
+        std::cout << "5. Obtener ultimo" << std::endl;
+        std::cout << "6. Salir" << std::endl;
 
-    std::cout << "Primer libro: " << lista_libros.obtenerPrimero().titulo << std::endl << std::endl;
+        std::cin >> opcion;
 
-    std::cout << "Último libro: " << lista_libros.obtenerUltimo().titulo << std::endl << std::endl;
+        switch (opcion) {
+            case 1: {
+                Libro nuevo_libro;
+                std::cout << "Ingrese el titulo del libro: ";
+                std::cin >> nuevo_libro.titulo;
+                std::cout << "Ingrese el autor del libro: ";
+                std::cin >> nuevo_libro.autor;
+                std::cout << "Ingrese el año de publicacion del libro: ";
+                std::cin >> nuevo_libro.anio_publicacion;
 
-    Libro libro_a_eliminar = {"1984", "George Orwell", 1949};
+                lista_libros.insertar(nuevo_libro);
 
-    lista_libros.eliminar(libro_a_eliminar);
+                lista_libros.imprimir();
 
-    std::cout << "Lista después de eliminar un libro:" << std::endl << std::endl;
+                break;
+            }
+            case 2: {
+                Libro libro_a_eliminar;
+                std::cout << "Ingrese el titulo del libro a eliminar: ";
+                std::cin >> libro_a_eliminar.titulo;
+                std::cout << "Ingrese el autor del libro a eliminar: ";
+                std::cin >> libro_a_eliminar.autor;
+                std::cout << "Ingrese el año de publicacion del libro a eliminar: ";
+                std::cin >> libro_a_eliminar.anio_publicacion;
 
-    lista_libros.imprimir();
+                lista_libros.eliminar(libro_a_eliminar);
 
-    lista_libros.vaciar();
+                lista_libros.imprimir();
 
-    std::cout << "Lista después de vaciarla:" << std::endl << std::endl;
+                break;
+            }
+            case 3: {
+                lista_libros.vaciar();
 
-    lista_libros.imprimir();
+                lista_libros.imprimir();
+
+                break;
+            }
+            case 4: {
+                Libro primer_libro = lista_libros.obtenerPrimero();
+
+                std::cout << "El primer libro en la lista es:" << std::endl;
+                std::cout << "Titulo: " << primer_libro.titulo << ", Autor: " << primer_libro.autor << ", Año de publicacion: " << primer_libro.anio_publicacion << "." << std::endl;
+
+                break;
+            }
+            case 5: {
+                Libro ultimo_libro = lista_libros.obtenerUltimo();
+
+                std::cout << "El ultimo libro en la lista es:" << std::endl;
+                std::cout << "Titulo: " << ultimo_libro.titulo << ", Autor: " << ultimo_libro.autor << ", Año de publicacion: " << ultimo_libro.anio_publicacion << "." << std::endl;
+
+                break;
+            }
+            case 6:
+                break;
+            default:
+                std::cout << "Opcion invalida." << std::endl;
+
+                break;
+        }
+
+    }
+
+    return 0;
 }

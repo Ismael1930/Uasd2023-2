@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "TestAccount2",
+            "request": "launch",
+            "mainClass": "com.mybank.test.TestAccount2",
+            "projectName": "Uasd2023-2_794281e3"
+        },
+        {
+            "type": "java",
             "name": "Testing2",
             "request": "launch",
             "mainClass": "Testing2",

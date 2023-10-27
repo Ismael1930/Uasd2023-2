@@ -4,6 +4,14 @@
 
 ListaCircularDoble::ListaCircularDoble() {
     cabeza = NULL;
+
+    Libro libro1 = {"El gran Gatsby", "F. Scott Fitzgerald", 1925};
+    Libro libro2 = {"Cien años de soledad", "Gabriel García Márquez", 1967};
+    Libro libro3 = {"1984", "George Orwell", 1949};
+
+    insertar(libro1);
+    insertar(libro2);
+    insertar(libro3);
 }
 
 void ListaCircularDoble::insertar(Libro nuevo_libro) {
@@ -79,12 +87,18 @@ void ListaCircularDoble::imprimir() {
     Nodo* nodo_actual = cabeza;
 
     if (cabeza != NULL) {
+        std::cout << "Lista de libros:" << std::endl << std::endl;
+
         do {
-            std::cout << "Título: " << nodo_actual->libro.titulo << std::endl;
+            std::cout << "Titulo: " << nodo_actual->libro.titulo << std::endl;
             std::cout << "Autor: " << nodo_actual->libro.autor << std::endl;
-            std::cout << "Año de publicación: " << nodo_actual->libro.anio_publicacion << std::endl << std::endl;
+            std::cout << "Ano de publicacion: " << nodo_actual->libro.anio_publicacion << std::endl << std::endl;
 
             nodo_actual = nodo_actual->siguiente;
         } while (nodo_actual != cabeza);
+        
+        std::cout << std::endl;
+    } else {
+        std::cout << "La lista está vacía." << std::endl << std::endl;
     }
 }
