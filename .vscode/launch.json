@@ -1,0 +1,59 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "TestAccount2",
+            "request": "launch",
+            "mainClass": "com.mybank.test.TestAccount2",
+            "projectName": "Uasd2023-2_794281e3"
+        },
+        {
+            "type": "java",
+            "name": "Testing2",
+            "request": "launch",
+            "mainClass": "Testing2",
+            "projectName": "Uasd2023-2_794281e3"
+        },
+        {
+            "type": "java",
+            "name": "Test1",
+            "request": "launch",
+            "mainClass": "Test1",
+            "projectName": "Uasd2023-2_794281e3"
+        },
+        {
+            "type": "java",
+            "name": "TestAnother1",
+            "request": "launch",
+            "mainClass": "TestAnother1",
+            "projectName": "Uasd2023-2_794281e3"
+        },
+        {
+            "name": "C/C++: g++.exe build and debug active file",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "C:\\Program Files\\CodeBlocks\\MinGW\\bin\\gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "C/C++: g++.exe build active file"
+        }
+    ],
+    "version": "2.0.0"
+}
