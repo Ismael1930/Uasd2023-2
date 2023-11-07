@@ -38,6 +38,11 @@
         "streambuf": "cpp",
         "typeinfo": "cpp",
         "cstdarg": "cpp",
-        "optional": "cpp"
-    }
+        "optional": "cpp",
+        "chrono": "cpp",
+        "valarray": "cpp",
+        "bitset": "cpp",
+        "regex": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }
