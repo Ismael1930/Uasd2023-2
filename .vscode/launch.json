@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "TestIsSubString",
+            "request": "launch",
+            "mainClass": "TestIsSubString",
+            "projectName": "Uasd2023-2_794281e3"
+        },
+        {
+            "type": "java",
+            "name": "FooBarBaz",
+            "request": "launch",
+            "mainClass": "TeoProgramacion2.Lab4.Exercise1.FooBarBaz",
+            "projectName": "Uasd2023-2_794281e3"
+        },
+        {
+            "type": "java",
             "name": "TestAccount2",
             "request": "launch",
             "mainClass": "com.mybank.test.TestAccount2",
