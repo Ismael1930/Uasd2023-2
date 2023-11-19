@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "TestArrays",
+            "request": "launch",
+            "mainClass": "TeoProgramacion2.Lab5.Exersice1.ArrayProject.test.TestArrays",
+            "projectName": "Uasd2023-2_794281e3"
+        },
+        {
+            "type": "java",
             "name": "TestIsSubString",
             "request": "launch",
             "mainClass": "TestIsSubString",
